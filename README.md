@@ -17,7 +17,7 @@ No se necesita una instalación especial para este proyecto, ya que es una aplic
 Descarga o clona este repositorio en tu máquina local usando:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/MarkNieto/amigoSecreto.git
 ```
 
 Luego, abre el archivo index.html en tu navegador preferido para ejecutar la aplicación.
