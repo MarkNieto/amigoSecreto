@@ -4,6 +4,8 @@ const amigos = [];
 const nombreAmigo = document.getElementById('amigo');
 const botonAgregar = document.getElementById('agregar');
 const lista = document.getElementById('listaAmigos');
+const resultado =  document.getElementById('resultado');
+const botonSortear = document.getElementById('botonSortear');
 
 //Se crea una función que permita al usuario ingresar un nombre en el campo de texto y añadirlo a la lista de amigos creada anteriormente.
 botonAgregar.onclick = function agregarAmigo(){
@@ -17,8 +19,11 @@ botonAgregar.onclick = function agregarAmigo(){
 
 
     agregarLista();
-    console.log(amigos);
+    //console.log(amigos);
+    botonSortear.disabled = false;
 }
+
+//Función que permite agregar nombres a la lista según los elementos que contenga el array 
 
 function agregarLista(){
     lista.innerHTML = "";
@@ -29,5 +34,22 @@ function agregarLista(){
     }
 }
 
+//Función para validar que haya elementos disponibles en el array
+botonSortear.onclick = () => {
 
+    if(botonSortear.disabled = amigos.length === 0){
+        resultado.innerHTML = "No hay amigos que seleccionar";
+        return;
+    }else{
+   //generar un indice aleatorio para el array
+   const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+   //Obtener el nombre sorteado
+   const amigoSeleccionado = amigos[indiceAleatorio];
+   //Se muestra el resultado en el elemento seleccionado
+   console.log(amigos);
+   console.log(indiceAleatorio);
+   console.log(amigoSeleccionado);
+   resultado.innerHTML = amigoSeleccionado;
+    }
+}
 
